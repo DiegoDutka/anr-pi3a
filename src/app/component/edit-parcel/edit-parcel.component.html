@@ -1,0 +1,54 @@
+<h2> Editar Parcela</h2>
+
+<form [formGroup]="editvendido" (ngSubmit)="editparcelavendida()">
+    <h3>Datos de la Parcela</h3>
+    <div class="input">
+        <label class="label-form" for="fidparcela">id parcela</label>
+        <input type="text" id="fidparcela" placeholder="id parcela" formControlName="idParcela" >
+    </div>
+    <div class="input">
+        <label class="label-form" for="fidog">id objeto geografico</label>
+        <input type="text" id="fidog" placeholder="id objeto geografico" formControlName="idOG">
+    </div>
+    <div class="input">
+        <label class="label-form" for="fNroPartida">NroPartida</label>
+        <input type="text" id="fNroPartida" placeholder="NroPartida" formControlName="nroPartida">
+    </div>
+    <div class="input">
+        <label class="label-form" for="fnroboleto">Nro boleto Compra/Venta</label>
+        <input type="text" id="fnroboleto" placeholder="nro boleto C/V" formControlName="nroboleto">
+    </div>
+    <div class="input">
+        <label class="label-form" for="fFechaBoleto">Año Boleto Compra/Venta </label>
+        <input type="text" id="fFechaBoleto" placeholder="Fecha Boleto" formControlName="anioBoleto">
+    </div>
+    <div class="input">
+        <label class="label-form" for="fFechaBoleto">Fecha Boleto Compra/Venta </label>
+        <input type="text" id="fFechaBoleto" placeholder="DD/MM/AAAA" formControlName="fechaBoleto">
+    </div>
+    <div class="input">
+        <label class="label-form" for="fEscritura">Escritura</label>
+        <select name="fEscritura" id="fEscritura" formControlName="escritura">
+            <option value="true"> Tiene </option>
+            <option value="false"> No Tiene </option>
+        </select>
+    </div>
+    <div class="input">
+        <label class="label-form" for="fnroexpediente">nro Expedinete </label>
+        <input type="text" id="fnroexpediente" placeholder="nro Expedinete" formControlName="nroExpediente">
+    </div>
+    <div class="input">
+        <label class="label-form" for="ffechaexpediente">anio Expedinete </label>
+        <input type="text" id="ffechaexpediente" placeholder=" Expedinete" formControlName="anioExpediente">
+    </div>
+    <h3>Datos del propietario</h3>
+    <div class="input">
+        <label class="label-form" for="fCUIT">CUIT</label>
+        <select name="fCUIT" id="fCUIT" formControlName="CUIT">
+            <option *ngFor=" let cuit of propietario" value="{{cuit.cuit}}"> {{cuit.cuit}} </option>
+        </select>
+    </div>
+    <div class="btn-wrapper">
+        <button type="submit" class="parcel-btn2"> Editar</button>
+    </div>
+</form>

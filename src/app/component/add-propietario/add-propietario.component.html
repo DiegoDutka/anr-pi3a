@@ -1,0 +1,60 @@
+<h2>Propietarios</h2>
+<form [formGroup]="formpropietario"  (ngSubmit)="actionDo()">
+    <h3>Datos de la Parcela</h3>
+    <div class="input">
+      <label class="label-form" for="cuit">cuit</label> 
+      <input type="text" id="cuit" placeholder=" cuit" formControlName="cuit" ><br>
+      <a (click)="getpropietario(this.formpropietario.get('cuit')?.value)"><img src="../../../assets/img/icons8-edit-30-azul.png" alt="editar"></a>
+    </div>
+    <div class="input">
+      <label class="label-form" for="razon_social">Razon social</label> 
+      <input type="text" id="razon_social" placeholder="Razon social " formControlName="razon_social" ><br>
+    </div>
+    <div class="input">
+      <label class="label-form" for="sitio_web">Sitio web</label> 
+      <input type="text" id="sitio_web" placeholder="Sitio web " formControlName="sitio_web" ><br>
+    </div>
+    <div class="input">
+      <label class="label-form" for="telefono_institucional">Telefono institucional </label> 
+      <input type="text" id="telefono_institucional" placeholder="Telefono institucional  " formControlName="telefono_institucional" ><br>
+    </div>
+    <div class="input">
+      <label class="label-form" for="e_mail_institucional">Email institucional </label> 
+      <input type="text" id="e_mail_institucional" placeholder="Email institucional" formControlName="e_mail_institucional" ><br>
+    </div>
+    <div class="input">
+      <label class="label-form" for="representantes_legales">Representantes legales </label> 
+      <input type="text" id="representantes_legales" placeholder="representantes legales" formControlName="representantes_legales" ><br>
+    </div>
+    <div class="input">
+      <label class="label-form" for="telefono_contacto">Telefono contacto </label> 
+      <input type="text" id="telefono_contacto" placeholder="telefono contacto" formControlName="telefono_contacto" ><br>
+    </div>
+    <div class="input">
+      <label class="label-form" for="e_mail_contacto">Email contacto</label> 
+      <input type="text" id="e_mail_contacto" placeholder="Email contacto" formControlName="e_mail_contacto" ><br>
+    </div>
+    <div class="input">
+      <label class="label-form" for="cantidad_empleados">Cantidad empleados</label> 
+      <input type="text" id="cantidad_empleados" placeholder="cantidad empleados" formControlName="cantidad_empleados" ><br>
+    </div>
+    <div class="input">
+      <label class="label-form" for="fecha_inicio_act">fecha_inicio_act</label> 
+      <input type="text" id="fecha_inicio_act" placeholder="AAAA-MM-DD" formControlName="fecha_inicio_act" ><br>
+    </div>
+    <div class="input">
+      <label class="label-form" for="id_actividad">id actividad</label> 
+      <input type="text" id="id_actividad" placeholder="id_actividad" formControlName="id_actividad" ><br>
+    </div>
+    <div class="input">
+      <label class="label-form" for="estado">estado</label> 
+      <input type="text" id="estado" placeholder="estado" formControlName="estado" ><br>
+    </div>
+    <div class="input">
+      <label class="label-form" for="id_rubro">Id rubro</label> 
+      <input type="text" id="id_rubro" placeholder="id_rubro" formControlName="id_rubro" ><br>
+    </div>
+    <div class="btn-wrapper">
+      <button type="submit" class="parcel-btn2" > Agregar</button>
+    </div>
+</form>

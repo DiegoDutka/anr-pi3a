@@ -1,0 +1,30 @@
+<H1>Parcelas Reservadas</H1>
+<div class="tablewaprer">
+    <table class="info-parcel">
+        <tr>
+            <th>Nro solicitud</th>
+            <th>Id parcela</th>
+            <th>Id objeto geografico</th>
+            <th>Responsable reserva</th>
+            <th>Fecha caducidad</th>
+            <th>Banda forestal</th>
+            <th>alambrado perimetral</th>
+            <th>construccion</th>
+            <th>Borrar</th>
+            <th>Editar</th>
+        </tr>
+        <tr *ngFor=" let reservada of parcelarReservada">
+            <td>{{reservada.nro_solicitud_reserva}}</td>
+            <td>{{reservada.id_parcela}}</td>
+            <td>{{reservada.id_parcela_og}}</td>
+            <td>{{reservada.responsable_reserva}}</td>
+            <td>{{reservada.fecha_caducidad_reserva}}</td>
+            <td>{{reservada.banda_forestal}}</td>
+            <td>{{reservada.alambrado_perimetral}}</td>
+            <td>{{reservada.construccion}}</td>
+            <td><a (click)="borraParcela(reservada.id_parcela)"><img src="../../../assets/img/icons8-delete-30.png"></a></td>
+            <td><a routerLink="edit/{{reservada.id_parcela}}"><img src="../../../assets/img/icons8-edit-30.png"></a></td>
+        </tr>
+    </table>
+
+</div>

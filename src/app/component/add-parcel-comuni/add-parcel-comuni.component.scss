@@ -1,0 +1,42 @@
+form{
+    width: 100%;
+}
+.label-form{
+    margin-right: 10px;
+}
+.input{
+    display: flex;
+    justify-content:space-between;
+    margin: 10px;
+    font-weight: 600;
+}
+.input>label{
+    width: 15%;
+}
+.input>input{
+    width: 80%;
+}
+select {
+    width: 80%;
+    margin-right: 25px;
+    
+}
+.parcel-btn2{
+    margin: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: var(--main-color);
+    font-weight: 1000;
+    font-size: medium;
+    border: solid 2px var(--main-color);
+}
+.parcel-btn2:hover {
+    background-color: var(--second-color);
+    color: white;
+}
+.btn-wrapper{
+    display: flex;
+    justify-content: center;
+}

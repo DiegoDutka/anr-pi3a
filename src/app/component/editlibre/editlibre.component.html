@@ -1,0 +1,19 @@
+<h2> Editar Parcela</h2>
+<form [formGroup]="editlibreform" (ngSubmit)="editlibre()">
+    <h3>Datos de la Parcela</h3>
+    <div class="input">
+        <label class="label-form" for="id_parcela">Id Parcela</label>
+        <input type="text" id="id_parcela" placeholder="id parcela" formControlName="id_parcela" required><br>
+    </div>
+    <div class="input">
+        <label class="label-form" for="id_parcela_og">Id Parcela OG</label>
+        <input type="text" id="id_parcela_og" placeholder="id parcela og" formControlName="id_parcela_og" required><br>
+    </div>
+    <div class="input">
+        <label class="label-form" for="valor">valor</label>
+        <input type="text" id="valor" placeholder="nro valor" formControlName="valor" required><br>
+    </div>
+    <div class="btn-wrapper">
+        <button type="submit" class="parcel-btn2"> Editar</button>
+    </div>
+</form>

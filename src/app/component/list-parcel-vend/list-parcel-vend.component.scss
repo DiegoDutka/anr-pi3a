@@ -1,0 +1,15 @@
+.info-parcel{
+    color: white;
+    border: 2px solid;
+    margin: 0px 5px 60px 5px;
+    overflow-x: auto;
+}
+tr:hover{
+    background-color: var(--second-color);
+}
+tr,td {
+    text-align: center;
+    border-bottom: 1px solid white;
+    width: 12%;
+
+}

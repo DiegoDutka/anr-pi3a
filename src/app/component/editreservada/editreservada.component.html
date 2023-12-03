@@ -1,0 +1,50 @@
+<form [formGroup]="formeditreservado" (ngSubmit)="editreservada()">
+    <h3>Datos de la Parcela</h3>
+    <div class="input">
+        <label class="label-form" for="id_parcela">Id Parcela</label>
+        <input type="text" id="id_parcela" placeholder="id parcela" formControlName="id_parcela" required><br>
+    </div>
+    <div class="input">
+        <label class="label-form" for="id_parcela">Id Parcela OG</label>
+        <input type="text" id="id_parcela_og" placeholder="id parcela og" formControlName="id_parcela_og" required><br>
+    </div>
+    <div class="input">
+        <label class="label-form" for="id_parcela">Numero Reserva</label>
+        <input type="text" id="nro_solicitud_reserva" placeholder="nro reserva" formControlName="nro_solicitud_reserva"
+            required><br>
+    </div>
+    <div class="input">
+        <label class="label-form" for="responsable">Responsable reserva</label>
+        <input type="text" id="responsable_reserva" placeholder="Responsable reserva"
+            formControlName="responsable_reserva"><br>
+    </div>
+    <div class="input">
+        <label class="label-form" for="fechacaducidad">fechacaducidad</label>
+        <input type="text" id="fecha_caducidad_reserva" placeholder="fechacaducidad"
+            formControlName="fecha_caducidad_reserva"><br>
+    </div>
+    <div class="input">
+        <label class="label-form" for="Bandaforestal">Banda forestal</label>
+        <select name="Bandaforestal" id="Bandaforestal" formControlName="Bandaforestal">
+            <option value="true"> Tiene </option>
+            <option value="false" > No Tiene </option>
+        </select>
+    </div>
+    <div class="input">
+        <label class="label-form" for="alambradoperimetral">Alambrado Perimetral</label>
+        <select name="alambradoperimetral" id="alambradoperimetral" formControlName="alambradoperimetral">
+            <option value="true"> Tiene </option>
+            <option value="false" > No Tiene </option>
+        </select>
+    </div>
+    <div class="input">
+        <label class="label-form" for="construccion">Construccion</label>
+        <select name="construccion" id="construccion" formControlName="construccion">
+            <option value="true"> Tiene </option>
+            <option value="false" > No Tiene </option>
+        </select>
+    </div>
+    <div class="btn-wrapper">
+        <button type="submit" class="parcel-btn2"> Editar</button>
+    </div>
+</form>

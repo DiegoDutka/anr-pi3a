@@ -1,0 +1,18 @@
+<H1>Parcelas Comunitarias</H1>
+<div class="tablewaprer">
+    <table class="info-parcel">
+        <tr>
+            <th>Id parcela</th>
+            <th>Descripcion</th>
+            <th>Borrar</th>
+            <th>Editar</th>
+        </tr>
+        <tr *ngFor=" let comuni of parcelarComunitaria">
+            <td>{{comuni.id_parcela}}</td>
+            <td>{{comuni.descripcion}}</td>
+            <td><a (click)="borraParcela(comuni.id_parcela)"><img src="../../../assets/img/icons8-delete-30.png"></a></td>
+            <td><a routerLink="edit/{{comuni.id_parcela}}"><img src="../../../assets/img/icons8-edit-30.png"></a></td>
+        </tr>
+    </table>
+
+</div>

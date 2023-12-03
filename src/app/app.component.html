@@ -1,0 +1,67 @@
+<body>
+  <header>
+    <img src="../assets/img/logo_parqueIndustrial_TA.jpg" alt="Logo parque industria tres arroyos">
+    <a href="https://www.parqueindustrial3a.tresarroyos.gov.ar/"> Inicio</a>
+  </header>
+
+  <section class="main">
+    <div class="container">
+      <h1> Lista de Parcelas</h1>
+      <div class="wrapper-parcel-total">
+        <div class="wrapper-parcel-kind">
+          <a *ngFor=" let parcel of parcelType" routerLink= {{parcel}} >
+            <button type="button" class="parcel-btn">
+              <img src="../assets/img/Iconoparcelablanco.png" alt="icono lugar">
+              <p> Parcela <br>{{parcel}} </p>
+            </button>
+          </a>
+        </div>
+      </div>
+      <router-outlet></router-outlet>
+    </div>
+    <router-outlet name="edit"></router-outlet>
+  
+
+  </section>
+  <section class="post-parcel">
+    <h1>Agregar </h1>
+    <div class="wrapper-parcel-kind">
+      <a  [routerLink]= "[{ outlets: { add: [ 'addvendido' ] } }]" >
+        <button type="button" class="parcel-btn2">
+          <img src="../assets/img/Iconoparcelaazul.png" alt="icono lugar">
+          <p> Parcela <br>vendida</p>
+        </button>
+      </a>
+      <a  [routerLink]= "[{ outlets: { add: [ 'addreservada' ] } }]" >
+        <button type="button" class="parcel-btn2">
+          <img src="../assets/img/Iconoparcelaazul.png" alt="icono lugar">
+          <p> Parcela <br>reservada</p>
+        </button>
+      </a>
+      <a  [routerLink]= "[{ outlets: { add: [ 'addlibre' ] } }]" >
+        <button type="button" class="parcel-btn2">
+          <img src="../assets/img/Iconoparcelaazul.png" alt="icono lugar">
+          <p> Parcela <br>libre</p>
+        </button>
+      </a>
+      <a  [routerLink]= "[{ outlets: { add: [ 'addcomunitaria' ] } }]" >
+        <button type="button" class="parcel-btn2">
+          <img src="../assets/img/Iconoparcelaazul.png" alt="icono lugar">
+          <p> Parcela <br>comunitaria</p>
+        </button>
+      </a>
+      <a  [routerLink]= "[{ outlets: { add: [ 'addpropietario' ] } }]">
+        <button type="button" class="parcel-btn2">
+          <img src="../assets/img/Iconoparcelaazul.png" alt="icono lugar">
+          <p> Propietario</p>
+        </button>
+      </a>
+    </div>
+    <div class="formwrapper">
+      <router-outlet name="add"></router-outlet>
+
+    </div>
+    
+
+  </section>
+</body>

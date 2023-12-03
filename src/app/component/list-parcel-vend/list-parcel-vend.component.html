@@ -1,0 +1,50 @@
+<H1>Parcelas Vendidas</H1>
+
+    <table class="info-parcel">
+        <tr>
+            <th>NroPartida</th>
+            <th>Nro boleto C/V</th>
+            <th>Escritura</th>
+            <th>Fecha boleto</th>
+            <th>Expediente</th>
+            <th>CUIT</th>
+            <th>Razon Social</th>
+            <th>Web</th>
+            <th>Telefono <br> institucional</th>
+            <th>Mail institucional</th>
+            <th>Representante <br> legal</th>
+            <th>Telefono <br> representante</th>
+            <th>Mail <br> representante</th>
+            <th>Nro de <br> empleados</th>
+            <th>fecha de inicio </th>
+            <th>Estado</th>
+            <th>Descripcion de la actividad</th>
+            <th>Descripcion del rubro</th>
+            <th>Borrar</th>
+            <th>Editar</th>
+        </tr>
+        <tr *ngFor=" let vendida of parcelaVendida">
+            <td>{{vendida.nro_partida}}</td>
+            <td>{{vendida.boleto_compra_venta}}</td>
+            <td>{{vendida.case}}</td>
+            <td>{{vendida.fboleto}}</td>
+            <td>{{vendida.expediente}}</td>
+            <td>{{vendida.to_char}}</td>
+            <td>{{vendida.razon_social}}</td>
+            <td>{{vendida.sitio_web}}</td>
+            <td>{{vendida.telefono_institucional}}</td>
+            <td>{{vendida.e_mail_institucional}}</td>
+            <td>{{vendida.representantes_legales}}</td>
+            <td>{{vendida.telefono_contacto}}</td>
+            <td>{{vendida.e_mail_contacto}}</td>
+            <td>{{vendida.cantidad_empleados}}</td>
+            <td>{{vendida.fecha_inicio_act}}</td>
+            <td>{{vendida.estado}}</td>
+            <td>{{vendida.descripcion_actividad}}</td>
+            <td>{{vendida.descripcion_rubro}}</td>
+            <td><a (click)="borraParcela(vendida.id_parcela) "><img src="../../../assets/img/icons8-delete-30.png"></a></td>
+            <td><a routerLink="edit/{{vendida.id_parcela}}"><img src="../../../assets/img/icons8-edit-30.png"></a></td>
+
+
+        </tr>
+    </table>
