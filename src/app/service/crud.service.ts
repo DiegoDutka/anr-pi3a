@@ -11,7 +11,7 @@ import { parcela_comunitaria } from './parcela_comunitaria';
 })
 export class CrudService {
 
-API: string= 'http://localhost/CRUD/'
+API: string= 'http://172.18.30.6/CRUD/'
   constructor( private clientHttp:HttpClient) {}
 
   listarParcelaVendida (){
